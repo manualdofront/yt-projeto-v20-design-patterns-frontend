@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("./reset.scss");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+.section {
+  margin: 32px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.feature-item {
+  padding: 4px 16px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border-radius: 40px;
+  border: 1px solid #c3bfc6;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}

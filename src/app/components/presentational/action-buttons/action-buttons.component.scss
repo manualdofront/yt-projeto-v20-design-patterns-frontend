@@ -1,0 +1,44 @@
+:host {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+
+  footer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 32px;
+
+    button {
+      width: 218px;
+      height: 48px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.1rem;
+      border-radius: 40px;
+      border: 2px solid #000;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .cancel {
+      background-color: #fff;
+      color: #000;
+
+      &:hover {
+        background-color: #f2f2f2;
+      }
+    }
+
+    .buy {
+      background-color: #009c1a;
+      color: #fff;
+      border: none;
+
+      &:hover {
+        background-color: #007d15;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+
+  img {
+    width: 300px;
+    height: auto;
+  }
+
+  .description {
+    max-width: 360px;
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
