@@ -1,4 +1,17 @@
-<div class="features">
-  <app-is-favorite />
-  <app-has-discount />
-</div>
+@if (featuresState$ | async; as featuresState) {
+  @if (featuresState.productFeatures.isSectionVisible()) {
+    <div class="section">
+      <h2 class="title">Características</h2>
+
+      <div class="features">
+        @if (featuresState.productFeatures.isFeatureVisible(FeatureType.Favorite)) {
+          <app-is-favorite />
+        }
+
+        @if (featuresState.productFeatures.isFeatureVisible(FeatureType.Discount)) {
+          <app-has-discount />
+        }
+      </div>
+    </div>
+  }
+}

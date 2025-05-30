@@ -1,0 +1,21 @@
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { of } from 'rxjs';
+import { FeatureMockResponse } from '../../models/feature-mock-response';
+
+@Injectable({
+  providedIn: 'root',
+})
+export class FeaturesMockService {
+  getProductFeatures(): Observable<FeatureMockResponse> {
+    return of({
+      isFavorite: false,
+      isNewRelease: true,
+      rating: {
+        total: 10,
+        current: 9.3,
+      },
+      hasDiscount: true,
+    });
+  }
+}
