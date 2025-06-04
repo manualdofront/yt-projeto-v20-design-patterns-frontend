@@ -39,6 +39,17 @@
       &:hover {
         background-color: #007d15;
       }
+
+      &.has-discount {
+        background-color: #ff6200;
+        font-weight: bold;
+
+        > img {
+          width: 24px;
+          height: 24px;
+          margin-right: 8px;
+        }
+      }
     }
   }
 }
