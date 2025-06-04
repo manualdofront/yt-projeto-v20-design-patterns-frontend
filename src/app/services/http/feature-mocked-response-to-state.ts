@@ -5,5 +5,6 @@ export function mapFeatureMockedResponseToState(featuresResponse: FeatureMockRes
   return {
     isFavorite: featuresResponse?.isFavorite || false,
     hasDiscount: featuresResponse?.hasDiscount || false,
+    rating: featuresResponse?.rating || { total: 0, current: 0 },
   };
 }
