@@ -12,7 +12,7 @@
           <app-has-discount />
         }
 
-        @if (featuresState.rating) {
+        @if (featuresState.rating.current > 0 && !featuresState.hasDiscount) {
           <app-rating />
         }
       </div>
