@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { FeatureMockResponse } from '../../models/feature-mock-response';
 
 @Injectable({
@@ -9,8 +8,7 @@ import { FeatureMockResponse } from '../../models/feature-mock-response';
 export class FeaturesMockService {
   getProductFeatures(): Observable<FeatureMockResponse> {
     return of({
-      isFavorite: false,
-      isNewRelease: true,
+      isFavorite: true,
       rating: {
         total: 10,
         current: 9.3,

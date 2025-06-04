@@ -1,8 +1,8 @@
 import { inject, Injectable } from '@angular/core';
-import { FeaturesMockService } from '../http/features-mock.service';
-import { ProductFeatures } from '../../domain/product-features';
 import { BehaviorSubject, map, Observable, tap } from 'rxjs';
+import { ProductFeatures } from '../../domain/product-features';
 import { mapFeatureMockedResponseToProductFeatures } from '../http/feature-mocked-response-to-product-features';
+import { FeaturesMockService } from '../http/features-mock.service';
 
 export type FeatureState = {
   productFeatures: ProductFeatures;

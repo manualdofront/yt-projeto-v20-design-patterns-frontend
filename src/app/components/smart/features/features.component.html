@@ -11,6 +11,10 @@
         @if (featuresState.productFeatures.isFeatureVisible(FeatureType.Discount)) {
           <app-has-discount />
         }
+
+        @if (featuresState.productFeatures.isFeatureVisible(FeatureType.Rating)) {
+          <app-rating />
+        }
       </div>
     </div>
   }
