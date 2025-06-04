@@ -1,5 +1,11 @@
-<footer>
-  <button class="cancel">Cancelar</button>
+@if (featuresState$ | async; as featuresState) {
+  <footer>
+    <button class="cancel">Cancelar</button>
 
-  <button class="buy">Comprar</button>
-</footer>
+    @if (featuresState.hasDiscount) {
+      <button class="buy has-discount"><img src="/assets/images/discount.png" alt="" /> Comprar</button>
+    } @else {
+      <button class="buy">Comprar</button>
+    }
+  </footer>
+}
