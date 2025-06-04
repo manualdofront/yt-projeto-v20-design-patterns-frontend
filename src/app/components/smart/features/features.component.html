@@ -12,6 +12,10 @@
           <app-has-discount />
         }
 
+        @if (featuresState.isNewRelease) {
+          <app-is-new-release />
+        }
+
         @if (featuresState.rating.current > 0 && !featuresState.hasDiscount) {
           <app-rating />
         }

@@ -11,6 +11,7 @@ type Rating = {
 export type FeatureState = {
   isFavorite: boolean;
   hasDiscount: boolean;
+  isNewRelease: boolean;
   rating: Rating;
   hasDataEnoughToDisplaySection?: boolean;
 };
@@ -24,6 +25,7 @@ export class FeaturesService {
   private state: BehaviorSubject<FeatureState> = new BehaviorSubject<FeatureState>({
     isFavorite: false,
     hasDiscount: false,
+    isNewRelease: false,
     rating: { total: 0, current: 0 },
     hasDataEnoughToDisplaySection: false,
   });
@@ -32,8 +34,10 @@ export class FeaturesService {
     map((state: FeatureState) => ({
       isFavorite: state.isFavorite,
       hasDiscount: state.hasDiscount,
+      isNewRelease: state.isNewRelease,
       rating: state.rating,
-      hasDataEnoughToDisplaySection: state.isFavorite || state.hasDiscount,
+      hasDataEnoughToDisplaySection:
+        state.isFavorite || state.hasDiscount || state.rating.current > 0 || state.isNewRelease,
     })),
   );
 
