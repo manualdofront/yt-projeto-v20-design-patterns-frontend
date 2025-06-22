@@ -11,9 +11,9 @@ export class FeaturesMockService {
       isFavorite: true,
       rating: {
         total: 10,
-        current: 9.3,
+        current: 8.3,
       },
-      hasDiscount: true,
+      hasDiscount: false,
     });
   }
 }

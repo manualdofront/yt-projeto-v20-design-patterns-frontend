@@ -2,7 +2,7 @@
   <footer>
     <button class="cancel">Cancelar</button>
 
-    @if (featuresState.hasDiscount) {
+    @if (featuresState.productFeatures.isFeatureVisible(FeatureType.Discount)) {
       <button class="buy has-discount"><img src="/assets/images/discount.png" alt="" /> Comprar</button>
     } @else {
       <button class="buy">Comprar</button>

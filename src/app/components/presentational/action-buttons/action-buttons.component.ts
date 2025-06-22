@@ -1,6 +1,7 @@
 import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { Observable } from 'rxjs';
+import { FeatureType } from '../../../models/feature-type';
 import { FeaturesService, FeatureState } from '../../../services/view/features.service';
 
 @Component({
@@ -12,5 +13,6 @@ import { FeaturesService, FeatureState } from '../../../services/view/features.s
 export class ActionButtonsComponent {
   private readonly featuresService = inject(FeaturesService);
 
+  readonly FeatureType: typeof FeatureType = FeatureType;
   readonly featuresState$: Observable<FeatureState> = this.featuresService.featuresState$;
 }

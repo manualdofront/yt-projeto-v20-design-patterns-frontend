@@ -13,7 +13,10 @@
         }
 
         @if (featuresState.productFeatures.isFeatureVisible(FeatureType.Rating)) {
-          <app-rating />
+          <app-rating
+            [currentRating]="featuresState.productFeatures.getFeature(FeatureType.Rating)?.['_current']"
+            [totalRating]="featuresState.productFeatures.getFeature(FeatureType.Rating)?.['_total']"
+          />
         }
       </div>
     </div>
