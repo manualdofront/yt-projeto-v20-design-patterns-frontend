@@ -9,7 +9,7 @@
 ## 💡 Lembretes
 
 > [!NOTE]
-> Você está na branch **``jeito-normal` (normal)`**!
+> Você está na branch **``jeito-normal (normal)``**!
 
 ## 🚀 Instalação / Configuração
 
